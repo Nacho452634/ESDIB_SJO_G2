@@ -1,0 +1,543 @@
+body{
+  background-color: rgb(255, 249, 240);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.logo {
+  margin-left: 60px;
+  height: 100px;            
+  width: auto;  
+  margin-top: 20PX;           
+}
+
+
+
+
+header {
+  display: flex;
+  justify-content: space-between; /* separa el logo, menú y botón */
+  align-items: center;
+  padding-top: 0px;
+  position: relative;
+  margin-top: 0;
+}
+
+/* Menú centrado */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+nav a{ 
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color: black;
+ }
+
+ nav a:hover{
+    color: #f57f17;
+    transform: scale(1.05);
+ }
+
+/* Botón inicio de sesión */
+.sesion {
+  background-color:rgb(244, 159, 81);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 50px;
+}
+
+.sesion:hover {
+  background-color: #f57f17;
+  transform: scale(1.05);
+}
+
+.img-hero {
+  flex: 1;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 60px;
+  }
+
+.imageninicio{
+  position: static;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+}
+
+
+/* Barra azul */
+.barra-datos {
+  width: 100vw; /* ocupa todo el ancho de la ventana */
+  padding: 20px 0;
+  background-color:rgb(244, 159, 81); 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px; /* espacio entre los datos */
+  font-family: sans-serif;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* centra incluso si el body tiene márgenes */
+}
+
+
+.dato {
+  position: relative; 
+  text-align: center;
+}
+
+.dato h3 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.dato p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.dato:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -75px; 
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+/*aquí empieza el texto al lado de la imagen*/
+
+.contenedorinicio {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 0px; /* margen interno */
+  box-sizing: border-box;
+  margin-top: 20px; /* baja todo el bloque si hace falta */
+  position: relative;
+  margin-left: 80px;
+}
+
+.textofoto {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 40px; /* separa texto de la imagen */
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.textofoto h1 {
+  font-size: 35px;
+  color:rgb(244, 159, 81);
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+}
+
+.textofoto p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boton-adopciones {
+  display: inline-block;
+  background-color: rgb(244, 159, 81); 
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+}
+
+.boton-adopciones:hover {
+  background-color: rgb(230, 140, 60); /* tono más oscuro al pasar el ratón */
+  transform: scale(1.05);
+}
+
+section {
+  padding: 20px 0; /* por ejemplo */
+}
+
+.hero-contenido {
+  position: relative;
+  top: -50px; 
+}
+
+/*PRIMERA SECCIÓN VERSIÓN RESPONSIVE*/
+@media (max-width: 768px) {
+  /* El bloque texto+foto se apila verticalmente */
+  .contenedorinicio {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .textofoto {
+    max-width: 90%;
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+
+  .textofoto h1 {
+    font-size: 28px;
+    white-space: normal; /* deja que el título se divida en dos líneas */
+  }
+
+  .textofoto p {
+    font-size: 16px;
+  }
+
+  .boton-adopciones {
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+
+  /* Imagen centrada y más pequeña */
+  .img-hero {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .imageninicio {
+    max-width: 90%;
+  }
+
+  /* Barra de datos en columna, centrada */
+  .barra-datos {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+  }
+
+  .dato:not(:last-child)::after {
+    display: none; /* quita las líneas verticales entre datos */
+  }
+}
+
+/*SE ACABA LA PRIMERA SECCIÓN*/
+
+
+/*EMPIEZA LA SECCIÓN DE LOS PASOS*/
+.pasos {
+  padding: 10px 40px;
+  text-align: center;
+}
+
+.pasos h2 {
+  font-size: 1rem;
+  color: #666;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pasos h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: rgb(244, 159, 81);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.step {
+  max-width: 230px;
+  text-align: center;
+}
+
+.step h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: rgb(244, 159, 81);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Separador (huella entre pasos) */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paw {
+  width: 50px; /* tamaño pequeño y proporcionado */
+  height: auto;
+  opacity: 0.8;
+}
+
+/*EMPIEZA LA SECCIÓN DE LOS PASOS*/
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column; /* los pone uno debajo del otro */
+    gap: 25px;
+  }
+
+  .step {
+    max-width: 90%;
+  }
+
+  .separator {
+    transform: rotate(90deg); /* gira la huella si quieres efecto vertical */
+  }
+
+  .paw {
+    width: 24px;
+    opacity: 0.9;
+  }
+}
+
+/*SE ACABA LA SECCIÓN DE LOS PASOS*/
+
+
+
+
+.faq {
+  position: relative;
+  background-color:rgb(255, 249, 240);
+  padding: 80px 40px;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+/* Contenido FAQ */
+.faq-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.faq-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.faq-texto h2 {
+  color: rgb(244, 159, 81); 
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+  bottom: 40px;
+}
+
+.faq-texto p {
+  color:#555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  position: relative;
+  bottom: 35px;
+}
+
+.faq-img {
+  width: 500px;
+  height: auto;
+  margin-top: 2px;
+  position: relative;
+  bottom: 60px;
+}
+
+.faq-preguntas {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  top: 50px;
+}
+
+details {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+summary {
+  font-weight: 600;
+  color: #333;
+  list-style: none;
+  font-size: 1rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  color: rgb(244, 159, 81);
+}
+
+details p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+details:hover {
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .faq-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq-img {
+    width: 200px;
+    margin: 20px 0;
+  }
+
+  details {
+    width: 100%;
+  }
+}
+
+/*ACABA CONTENIDO FAQ*/
+
+
+/*EMPIEZA EL FOOTER*/
+footer {
+  background-color:rgb(244, 159, 81);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* IZQUIERDA */
+.footer-left .perfil-btn {
+  width: 60px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.footer-left .perfil-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CENTRO */
+.footer-center {
+  text-align: center;
+}
+
+.logo-footer {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer-links a:hover {
+  color:rgb(230, 140, 60);
+}
+
+/* DERECHA */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 30px;
+  opacity: 0.9;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
