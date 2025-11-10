@@ -14,7 +14,7 @@ body{
 }
 
 
-
+/*AQUI EMPIEZA EL HEADER*/
 
 header {
   display: flex;
@@ -81,9 +81,14 @@ nav a{
   display: block;
   margin: 0;
 }
+.icono-perfil {
+  display: none; /* oculto en escritorio */
+}
 
 
-/* Barra azul */
+/*AQUI ACABA EL HEADER*/
+
+
 .barra-datos {
   width: 100vw; /* ocupa todo el ancho de la ventana */
   padding: 20px 0;
@@ -230,10 +235,12 @@ section {
   .img-hero {
     text-align: center;
     margin-right: 0;
+  
   }
 
   .imageninicio {
     max-width: 90%;
+    
   }
 
   /* Barra de datos en columna, centrada */
@@ -380,7 +387,7 @@ section {
 }
 
 .faq-texto p {
-  color:#555;
+  color:#333;
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -447,17 +454,28 @@ details:hover {
     text-align: center;
   }
 
-  .faq-img {
-    width: 200px;
-    margin: 20px 0;
-  }
+ .faq-img {
+  width: 200px;
+  margin: 5px 0 10px 0; 
+}
+
 
   details {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-img,
+  .faq-preguntas {
+    position: static; /* anula top/bottom del desktop */
+    margin: 5px 0; /* pequeño espacio natural entre ambos */
   }
 }
 
 /*ACABA CONTENIDO FAQ*/
+
 
 
 /*EMPIEZA EL FOOTER*/
@@ -468,6 +486,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 
 .footer-container {
   width: 100%;
@@ -540,4 +559,340 @@ footer {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+
+
+
+
+/*TODO ESTO ES RESPONSIVE, EN CONCRETO EL MENÚ DE NAVEGACIÓN*/
+ 
+
+@media (max-width: 768px) {
+  /* ----- HEADER ----- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  /* ----- LOGO A LA IZQUIERDA ----- */
+  .logo {
+    width: 65px;       
+    height: auto;
+    margin: 0;
+  }
+
+  /* ----- MENÚ ----- */
+ .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 18px;   
+  right: 48px; 
+  z-index: 3000;
+}
+
+
+
+  .hamburger span {
+    width: 100%;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* ----- ICONO PERFIL ----- */
+ .icono-perfil {
+  display: block;
+  position: absolute;
+  top: 16px;   
+  right: 12px; 
+}
+
+.icono-perfil img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+  /* ----- CONTENEDOR DERECHA (MENÚ + PERFIL) ----- */
+  .header-derecha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* ----- OCULTAR BOTÓN DE TEXTO EN MÓVIL ----- */
+  .sesion {
+    display: none;
+  }
+
+  /* ----- MENÚ DESPLEGABLE ----- */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.96);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    display: none;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+
+  #menu-toggle:checked ~ nav {
+    display: flex;
+  }
+
+  
+.hamburger {
+  z-index: 3000; 
+}
+
+/* Cambia el color de las líneas al abrir el menú */
+#menu-toggle:checked + .hamburger span {
+  background: rgb(244, 159, 81); 
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+}
+/* Ocultar completamente el checkbox del menú en todas las pantallas */
+#menu-toggle {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+
+
+.quiensomos{
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color:rgb(247, 204, 173);
+  z-index: 2;
+  position: relative;
+}
+
+.quiensomos h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 35px;
+  color:rgb(244, 159, 81);
+  margin-bottom: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 3;
+  position: relative;
+  top: -80px;
+}
+
+.quiensomos p{
+  font-size: 1rem;
+  color:#555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+position: relative;
+top: -60px;
+}
+
+.ondas{
+  width: 100vw;           
+  position: relative;
+  left: 50%;              
+  right: 50%;
+  margin-left: -50vw;     
+  margin-right: -50vw;
+  display: block;   
+  top: -12px;    
+}
+
+.ondas_arr{
+  width: 100vw;           
+  position: relative;
+  left: 50%;              
+  right: 50%;
+  margin-left: -50vw;     
+  margin-right: -50vw;
+  display: block;   
+  top: 5px;
+  z-index: 1;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .quiensomos {
+    padding: 60px 8%;
+    padding-bottom: 40px;
+  }
+
+  .quiensomos h2 {
+    font-size: 1.8rem;
+  }
+
+  .quiensomos p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .quiensomos p:last-of-type{
+    margin-bottom: 0;
+  }
+  
+}
+
+
+/*ESTO ES ASPECTOS DE INICIO DE SESIÓN*/
+.formulario{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  font-family:"Poppins", sans-serif;
+}
+ 
+.formulario h2{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom:1px solid silver;
+}
+
+.formulario{
+  padding:0 40px ;
+  box-sizing: border-box;
+}
+
+form .username{
+  position: relative;
+  border-bottom: 2px solid silver;
+  margin:30px 0 ;
+}
+
+.username input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.username label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color:#adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.username span::before{
+  content: ··;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgb(230, 140, 60);
+}
+
+.username input:focus ~ label,
+.username input:focus ~ label{
+  top: -5px;
+  color: #f57f17;
+}
+
+
+.username input:focus ~ span::before,
+.username input:focus ~ span::before{
+  width: 100%;
+}
+
+.recordar{
+  margin: -5px 0 20px 5px;
+  color: #f57f17;
+  cursor: pointer;
+}
+
+.recordar:hover{
+  text-decoration: underline;
+}
+
+input[type="submit"]:hover{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #f57f17;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover{
+  border-color: #f57f17;
+  transition: .5s;
+}
+
+.registrarse{
+  margin: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.registrarse a{
+color: #f57f17;
+text-decoration: none;
+}
+
+.registrarse a:hover{
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #f57f17;
+  background: white;         /* color base */
+  border-radius: 25px;
+  font-size: 18px;
+  color: #f57f17;            /* texto naranja */
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s;
 }
