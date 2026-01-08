@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/533ffa49-3a01-45f4-9523-9656a38d53c4/resourceGroups/esdibg2/providers/Microsoft.Web/sites/HappyPaws",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>HappyPaws</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="IMAGENES/logo happy paws.png" />
+
+</head>
+
+<body>
+
+  <header>
+    <img src="IMAGENES/logo happy paws.png" width="100px" height="100px" class="logo" alt="logo">
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- esto es de los botones-->
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="adopciones.html">Adopciones</a>
+      <a href="ayudanos.html">Ayudanos</a>
+    </nav>
+
+    <a href="perfil.html" class="sesion">Mi Perfil</a>
+    <!--BOTÓN SERA SOLO VISIBLE EN MEDIA-->
+    <a href="perfil.html" class="icono-perfil" aria-label="Mi Perfil">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="profile-svg">
+        <path fill-rule="evenodd"
+          d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+          clip-rule="evenodd" />
+      </svg>
+    </a>
+  </header>
+
+
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Buscar por nombre o raza...">
+    <button class="search-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="search-icon">
+        <path fill-rule="evenodd"
+          d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="cards-container">
+
+
+  </div>
+
+
+
+
+
+
+  <footer>
+    <div class="footer-container">
+      <!-- IZQUIERDA -->
+      <div class="footer-left">
+        <a href="perfil.html">
+          <img src="IMAGENES/iconoSESIO╠üN.png" alt="Perfil" class="perfil-btn">
+        </a>
+      </div>
+
+      <!-- CENTRO -->
+      <div class="footer-center">
+        <img src="IMAGENES/logo happy paws.png" alt="Logo" class="logo-footer">
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="adopciones.html">Adopciones</a>
+          <a href="ayudanos.html">Ayúdanos</a>
+        </div>
+      </div>
+
+      <!-- DERECHA -->
+      <div class="footer-right">
+        <img src="IMAGENES/instagram.png" alt="Instagram" class="social-icon">
+        <img src="IMAGENES/facebook.png" alt="Facebook" class="social-icon">
+        <img src="IMAGENES/tiktok.png" alt="TikTok" class="social-icon">
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+    // Seleccionamos todos los checkboxes de los likes
+    const likes = document.querySelectorAll('.like-checkbox');
+
+    // Al cargar la página, recuperar los estados guardados
+    likes.forEach((like, index) => {
+      const saved = localStorage.getItem(`like${index + 1}`);
+      if (saved === 'true') {
+        like.checked = true;
+      }
+
+      // Guardar cada vez que se hace clic
+      like.addEventListener('change', () => {
+        localStorage.setItem(`like${index + 1}`, like.checked);
+      });
+    });
+  </script>
+
+  <script src="dynamic-pets.js"></script>
+</body>

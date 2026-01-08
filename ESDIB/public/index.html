@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Mascotas</title>
+</head>
+
+<body>
+
+  <h1>Registro de Mascotas</h1>
+
+  <!-- FORMULARIO -->
+  <form id="petForm" enctype="multipart/form-data">
+    <h3>Agregar Mascota</h3>
+
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="raza" placeholder="Raza" required>
+    <input type="text" name="edad" placeholder="Edad" required>
+    <input type="text" name="genero" placeholder="Género" required>
+
+    <textarea name="descripcion" placeholder="Descripción" required></textarea>
+    <input type="file" name="image" accept="image/*" required>
+
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <!-- LISTADO -->
+  <div class="container" id="petsContainer"></div>
+
+  <!-- MODAL -->
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <span id="closeModal" style="float:right;cursor:pointer;font-size:22px;">✖</span>
+      <img id="modalImg">
+      <h2 id="modalNombre"></h2>
+      <p id="modalInfo"></p>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
