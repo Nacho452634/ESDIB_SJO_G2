@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>HappyPaws</title> 
+  
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="IMAGENES/logo happy paws.png" />
+
+</head>
+
+<body>
+
+ <header>
+<img src="IMAGENES/logo happy paws.png" width="100px" height="100px" class="logo" alt="logo">
+
+<input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+<!-- esto es de los botones-->
+ <nav>
+<a href="index.html"<button>Inicio </button>
+ </a>
+<a href="adopciones.html"<button> Adopciones </button>
+</a>
+<a href="ayudanos.html"<button> Ayudanos </button>
+</a>
+ </nav>
+
+    <a href="perfil.html" class="sesion">Mi Perfil</a>
+     <!--BOTÓN SERA SOLO VISIBLE EN MEDIA-->
+      <a href="perfil.html" class="icono-perfil">
+    <img src="IMAGENES/ICONO_SESIÓN.png" alt="Perfil">
+  </a>
+  </header>
+
+
+
+<div class="cards-container">
+
+<div class="pet-card">
+  <a href="#rock-modal" class="card-link"></a>
+
+  <img src="IMAGENES/bull terrier.jpg" alt="bullterrier">
+  <div class="info">
+    <h3>Rock</h3>
+    <p class="breed">Bull Terrier</p>
+    <p class="details">Macho, 2 años </p>
+  </div>
+  <input type="checkbox" id="like1" class="like-checkbox">
+  <label for="like1" class="like-btn">♥</label>
+</div>
+
+
+  
+  <div class="pet-card">
+    <a href="#shiba-modal" class="card-link"></a>
+    <img src="IMAGENES/yorkshire.jpg" alt="yorkshire">
+    <div class="info">
+      <h3>Shiba</h3>
+      <p class="breed">Yorkshire</p>
+      <p class="details">Hembra, 4 años</p>
+    </div>
+    <input type="checkbox" id="like2" class="like-checkbox">
+    <label for="like2" class="like-btn">♥</label>
+  </div>
+  
+  <div class="pet-card">
+    <a href="#lola-modal" class="card-link"></a>
+    <img src="IMAGENES/lorocabezaroja.jpg" alt="lorocabezaroja">
+    <div class="info">
+      <h3>Lola</h3>
+      <p class="breed"> Loro Cabeza Roja</p>
+      <p class="details">Hembra, 2 años</p>
+    </div>
+    <input type="checkbox" id="like3" class="like-checkbox">
+    <label for="like3" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#pipo-modal" class="card-link"></a>
+    <img src="IMAGENES/Bengali.jpeg" alt="bengali">
+    <div class="info">
+      <h3>Pipo</h3>
+      <p class="breed"> Bengali </p>
+      <p class="details">Macho, 9 meses</p>
+    </div>
+    <input type="checkbox" id="like4" class="like-checkbox">
+    <label for="like4" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#tambor-modal" class="card-link"></a>
+    <img src="IMAGENES/neerlande╠üs.jpg" alt="neerlandés">
+    <div class="info">
+      <h3>Tambor</h3>
+      <p class="breed"> Neerlandés </p>
+      <p class="details">Macho, 10 meses</p>
+    </div>
+    <input type="checkbox" id="like5" class="like-checkbox">
+    <label for="like5" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#blanca-modal" class="card-link"></a>
+    <img src="IMAGENES/shihtuz.jpg" alt="shihtuz">
+    <div class="info">
+      <h3>Blanca</h3>
+      <p class="breed"> Shih tuz </p>
+      <p class="details">Hembra, 3 años</p>
+    </div>
+    <input type="checkbox" id="like6" class="like-checkbox">
+    <label for="like6" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#tobi-modal" class="card-link"></a>
+    <img src="IMAGENES/Beagle.jpg" alt="beagle">
+    <div class="info">
+      <h3>Tobi</h3>
+      <p class="breed"> Beagle </p>
+      <p class="details">Macho, 2 años</p>
+    </div>
+    <input type="checkbox" id="like7" class="like-checkbox">
+    <label for="like7" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#nieve-modal" class="card-link"></a>
+    <img src="IMAGENES/british shorthair.jpg" alt="british short hair">
+    <div class="info">
+      <h3>Nieve</h3>
+      <p class="breed"> British short hair </p>
+      <p class="details">Hembra, 3 años</p>
+    </div>
+    <input type="checkbox" id="like8" class="like-checkbox">
+    <label for="like8" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#keko-modal" class="card-link"></a>
+    <img src="IMAGENES/BulldogFrances.jpg" alt="bulldog francés">
+    <div class="info">
+      <h3>Keko</h3>
+      <p class="breed"> Bulldog francés </p>
+      <p class="details">Macho, 3 años</p>
+    </div>
+    <input type="checkbox" id="like9" class="like-checkbox">
+    <label for="like9" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#kira-modal" class="card-link"></a>
+    <img src="IMAGENES/poodle.jpg" alt="poodle">
+    <div class="info">
+      <h3>Kira</h3>
+      <p class="breed"> Poodle</p>
+      <p class="details">Hembra, 1 años</p>
+    </div>
+    <input type="checkbox" id="like10" class="like-checkbox">
+    <label for="like10" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#lilo-modal" class="card-link"></a>
+    <img src="IMAGENES/comu╠ün.jpg" alt="gato común">
+    <div class="info">
+      <h3>Lilo</h3>
+      <p class="breed"> Gato común </p>
+      <p class="details">Hembra, 5 años</p>
+    </div>
+    <input type="checkbox" id="like11" class="like-checkbox">
+    <label for="like11" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#rambo-modal" class="card-link"></a>
+    <img src="IMAGENES/sheltie.jpg" alt="sheltie">
+    <div class="info">
+      <h3>Rambo</h3>
+      <p class="breed">Sheltie</p>
+      <p class="details">Macho, 1 años</p>
+    </div>
+    <input type="checkbox" id="like12" class="like-checkbox">
+    <label for="like12" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#pepa-modal" class="card-link"></a>
+    <img src="IMAGENES/ninfa.jpg" alt="ninfa">
+    <div class="info">
+      <h3>Pepa</h3>
+      <p class="breed"> Ninfa </p>
+      <p class="details">Hembra, 2 años</p>
+    </div>
+    <input type="checkbox" id="like13" class="like-checkbox">
+    <label for="like13" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#dante-modal" class="card-link"></a>
+    <img src="IMAGENES/da╠ülmata.jpg" alt="dálmata">
+    <div class="info">
+      <h3>Dante</h3>
+      <p class="breed">Dálmata</p>
+      <p class="details">Macho, 1 años</p>
+    </div>
+    <input type="checkbox" id="like14" class="like-checkbox">
+    <label for="like14" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#hugo-modal" class="card-link"></a>
+    <img src="IMAGENES/estrelladelaindia.jpg" alt="estrelladelaindia">
+    <div class="info">
+      <h3>Hugo</h3>
+      <p class="breed">Estrella de la india</p>
+      <p class="details">Macho, 4 años</p>
+    </div>
+    <input type="checkbox" id="like15" class="like-checkbox">
+    <label for="like15" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#shyla-modal" class="card-link"></a>
+    <img src="IMAGENES/mestizo.jpg" alt="mestizo">
+    <div class="info">
+      <h3>Shyla</h3>
+      <p class="breed">Mestizo</p>
+      <p class="details">Hembra, 6 años</p>
+    </div>
+    <input type="checkbox" id="like16" class="like-checkbox">
+    <label for="like16" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#kim-modal" class="card-link"></a>
+    <img src="IMAGENES/birmano.jpg" alt="birmano">
+    <div class="info">
+      <h3>Kim</h3>
+      <p class="breed">Birmano</p>
+      <p class="details">Hembra, 1 años</p>
+    </div>
+    <input type="checkbox" id="like17" class="like-checkbox">
+    <label for="like17" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#chester-modal" class="card-link"></a>
+    <img src="IMAGENES/chihuaha.jpg" alt="chihuaha">
+    <div class="info">
+      <h3>Chester</h3>
+      <p class="breed">Chihuaha</p>
+      <p class="details">Macho, 6 años</p>
+    </div>
+    <input type="checkbox" id="like18" class="like-checkbox">
+    <label for="like18" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#grok-modal" class="card-link"></a>
+    <img src="IMAGENES/canario.jpg" alt="canario">
+    <div class="info">
+      <h3>Grok</h3>
+      <p class="breed">Canario</p>
+      <p class="details">Macho, 1 años</p>
+    </div>
+    <input type="checkbox" id="like19" class="like-checkbox">
+    <label for="like19" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#pipa-modal" class="card-link"></a>
+    <img src="IMAGENES/americana1.jpg" alt="americana1">
+    <div class="info">
+      <h3>Pipa</h3>
+      <p class="breed">Americana</p>
+      <p class="details">Hembra, 2 años</p>
+    </div>
+    <input type="checkbox" id="like20" class="like-checkbox">
+    <label for="like20" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#nenu-modal" class="card-link"></a>
+    <img src="IMAGENES/angora.jpg" alt="angora">
+    <div class="info">
+      <h3>Nenu</h3>
+      <p class="breed">Angora</p>
+      <p class="details">Macho, 2 meses</p>
+    </div>
+    <input type="checkbox" id="like21" class="like-checkbox">
+    <label for="like21" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#truc-modal" class="card-link"></a>
+    <img src="IMAGENES/Labrador.jpg" alt="Labrador">
+    <div class="info">
+      <h3>Truc</h3>
+      <p class="breed">Labrador</p>
+      <p class="details">Macho, 4 años</p>
+    </div>
+    <input type="checkbox" id="like22" class="like-checkbox">
+    <label for="like22" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#flor-modal" class="card-link"></a>
+    <img src="IMAGENES/dutch.jpg" alt="dutch">
+    <div class="info">
+      <h3>Flor</h3>
+      <p class="breed">Dutch</p>
+      <p class="details">Hembra, 5 meses</p>
+    </div>
+    <input type="checkbox" id="like23" class="like-checkbox">
+    <label for="like23" class="like-btn">♥</label>
+  </div>
+
+
+  <div class="pet-card">
+    <a href="#byron-modal" class="card-link"></a>
+    <img src="IMAGENES/pitbull.jpg" alt="pitbull">
+    <div class="info">
+      <h3>Byron</h3>
+      <p class="breed">Pitbull</p>
+      <p class="details">Macho, 1 año</p>
+    </div>
+    <input type="checkbox" id="like25" class="like-checkbox">
+    <label for="like25" class="like-btn">♥</label>
+  </div>
+
+
+  <div class="pet-card">
+    <a href="#odette-modal" class="card-link"></a>
+    <img src="IMAGENES/sinraza1.jpg" alt="sinraza">
+    <div class="info">
+      <h3>Odette</h3>
+      <p class="breed">Mestizo</p>
+      <p class="details">Hembra, 5 años</p>
+    </div>
+    <input type="checkbox" id="like27" class="like-checkbox">
+    <label for="like27" class="like-btn">♥</label>
+  </div>
+
+  <div class="pet-card">
+    <a href="#draco-modal" class="card-link"></a>
+    <img src="IMAGENES/sinraza3.jpg" alt="sinraza1">
+    <div class="info">
+      <h3>Draco</h3>
+      <p class="breed">Mestizo</p>
+      <p class="details">Macho, 1 años</p>
+    </div>
+    <input type="checkbox" id="like28" class="like-checkbox">
+    <label for="like28" class="like-btn">♥</label>
+  </div>
+
+
+
+<!-- MODAL ROCK -->
+<div id="rock-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/bull terrier.jpg" class="modal-img" alt="Rock">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Rock</h2>
+      </div>
+
+      <p class="pet-info">Bull Terrier • Macho • 2 años</p>
+      <p class="modal-description">
+        Rock es un perro alegre, fuerte y muy cariñoso. Le encanta jugar, correr y estar 
+  rodeado de personas, por lo que es ideal para familias activas. Se lleva bien 
+  con otros perros y disfruta haciendo nuevos amigos. Está vacunado, 
+  desparasitado y tiene microchip. Su energía es alta, así que necesita paseos 
+  diarios y tiempo de juego para mantenerse feliz.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- MODAL SHIBA -->
+<div id="shiba-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/yorkshire.jpg" class="modal-img" alt="Shiba">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Shiba</h2>
+    
+      </div>
+
+      <p class="pet-info">Yorkshire • Hembra • 4 años</p>
+      <p class="modal-description">
+         Shiba es una perrita muy cariñosa y atenta con las personas que quiere. 
+  Le encanta estar acompañada y recibir mimos, pero también disfruta de 
+  sus paseos y aventuras al aire libre. Está vacunada, desparasitada y 
+  cuenta con microchip. Se lleva muy bien con niños y con otros perros 
+  tranquilos. Su nivel de energía es medio, ideal para un hogar donde 
+  pueda jugar y luego relajarse en el sofá contigo. Perfecta para una 
+  familia que busque una amiga dulce y fiel.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- MODAL LOLA -->
+<div id="lola-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/lorocabezaroja.jpg" class="modal-img" alt="Lola">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Lola</h2>
+    
+      </div>
+
+      <p class="pet-info">Loro de cabeza roja • Hembra • 2 años</p>
+      <p class="modal-description">
+         Lola es una lora muy curiosa, inteligente y sociable. Le encanta interactuar 
+  con las personas, llamar la atención con sus sonidos y descubrir nuevos 
+  juguetes. Es una compañera alegre y cariñosa cuando se siente en confianza.
+  Está desparasitada y con buen estado de salud. Su energía es media, ideal para 
+  quienes disfrutan del contacto con aves y buscan una amiga divertida con quien 
+  compartir el día a día.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- MODAL PIPO -->
+<div id="pipo-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/Bengali.jpeg" class="modal-img" alt="Pipo">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Pipo</h2>
+    
+      </div>
+
+      <p class="pet-info">Bengalí • Macho • 9 meses</p>
+      <p class="modal-description">
+   Pipo es un gatito muy activo, juguetón y curioso por naturaleza. Le encanta 
+  explorar y observar todo lo que ocurre a su alrededor, y siempre busca 
+  entretenerse con juegos y saltos. A pesar de su energía, es muy cariñoso y 
+  disfruta de las caricias cuando se calma.
+  Está vacunado, desparasitado y tiene microchip. Se lleva bien con otros gatos 
+  sociables y con niños. Ideal para una familia que quiera un compañero divertido 
+  que llene la casa de aventuras.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL TAMBOR -->
+<div id="tambor-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/neerlandés.jpg" class="modal-img" alt="tambor">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tambor</h2>
+    
+      </div>
+
+      <p class="pet-info">Neerlandés • Macho • 10 meses</p>
+      <p class="modal-description">
+     Tambor es un conejito muy simpático, curioso y siempre atento a lo que pasa 
+  a su alrededor. Le encanta jugar y explorar nuevos rincones, pero también 
+  disfruta de los momentos tranquilos mientras recibe caricias. Está desparasitado 
+  y con un excelente estado de salud. Su energía es media, ideal para familias 
+  que busquen un compañero dócil y con mucha ternura.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL BLANCA -->
+<div id="blanca-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/shihtuz.jpg" class="modal-img" alt="blanca">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Blanca</h2>
+    
+      </div>
+
+      <p class="pet-info">Shih tuz • Hembra • 3 años</p>
+      <p class="modal-description">
+     Blanca es una perrita dulce, tranquila y muy cariñosa. Le encanta estar cerca 
+  de las personas y disfrutar de siestas en compañía. Se lleva bien con niños y 
+  otros perros, por lo que es una gran compañera familiar. Está vacunada, 
+  desparasitada y tiene microchip. Energía baja-media, perfecta para un hogar 
+  donde le dediquen amor y mimos a diario.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL TOBI -->
+<div id="tobi-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/Beagle.jpg" class="modal-img" alt="tobi">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Tobi</h2>
+    
+      </div>
+
+      <p class="pet-info">Beagle • Macho • 2 años</p>
+      <p class="modal-description">
+     Tobi es un perro activo, curioso y con un gran sentido del olfato. Le encanta 
+  salir a pasear y jugar al aire libre, así como aprender nuevos juegos y retos. 
+  Está vacunado, desparasitado y tiene microchip. Muy sociable con niños y otros 
+  perros. Energía alta, ideal para familias aventureras.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL NIEVE -->
+<div id="nieve-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/british shorthair.jpg" class="modal-img" alt="nieve">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Nieve</h2>
+    
+      </div>
+
+      <p class="pet-info">British short hair • Hembra • 3 años</p>
+      <p class="modal-description">
+     Nieve es una gata tranquila, cariñosa y muy elegante. Le gusta mantener su 
+  independencia, pero siempre busca mimos cuando confía en sus cuidadores. 
+  Está vacunada, desparasitada y cuenta con microchip. Se lleva bien con otros 
+  gatos y es perfecta para un hogar relajado donde pueda sentirse segura y querida.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL KEKO -->
+<div id="keko-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/BulldogFrances.jpg" class="modal-img" alt="keko">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Keko</h2>
+    
+      </div>
+
+      <p class="pet-info">Bulldog Francés • Macho • 3 años</p>
+      <p class="modal-description">
+     Keko es un perro simpático, divertido y muy apegado a las personas. Adora 
+  recibir atención y se convierte rápidamente en el centro de la familia. 
+  Está vacunado, desparasitado y tiene microchip. Energía baja-media y gran 
+  compatibilidad con niños y otros perros tranquilos. Ideal para vivir en 
+  interiores con compañía frecuente.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL KIRA -->
+<div id="kira-modal" class="modal">
+  <div class="modal-box">
+
+    <a href="#" class="close-btn">✕</a>
+
+    <img src="IMAGENES/poodle.jpg" class="modal-img" alt="kira">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Kira</h2>
+    
+      </div>
+
+      <p class="pet-info">Poodle • Hembra • 1 año</p>
+      <p class="modal-description">
+    Kira es una perrita inteligente, juguetona y llena de energía. Aprende muy 
+  rápido y disfruta jugando con pelotas y juguetes interactivos. Está vacunada, 
+  desparasitada y cuenta con microchip. Se lleva muy bien con niños y otros 
+  perros. Perfecta para una familia que disfrute de juegos y paseos diarios.
+      </p>
+
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL LILO -->
+<div id="lilo-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/común.jpg" class="modal-img" alt="Lilo">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Lilo</h2></div>
+      <p class="pet-info">Gato común • Hembra • 5 años</p>
+      <p class="modal-description">
+        Lilo es una gata tranquila, curiosa y muy cariñosa una vez que coge confianza.
+        Disfruta del sol y de dormir cerca de sus humanos. Está vacunada,
+        desparasitada y tiene microchip. Energía baja-media, perfecta para un
+        hogar calmado donde pueda sentirse protegida, querida y respetada a su ritmo.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL RAMBO -->
+<div id="rambo-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/sheltie.jpg" class="modal-img" alt="Rambo">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Rambo</h2></div>
+      <p class="pet-info">Sheltie • Macho • 1 año</p>
+      <p class="modal-description">
+        Rambo es un perro inteligente, activo y leal. Le encanta jugar, aprender trucos
+        y dar paseos largos al aire libre. Está vacunado, desparasitado y cuenta con
+        microchip. Ideal para una familia dinámica que pueda dedicarle tiempo, cariño
+        y nuevas experiencias para seguir estimulando su mente.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PEPA -->
+<div id="pepa-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/ninfa.jpg" class="modal-img" alt="Pepa">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Pepa</h2></div>
+      <p class="pet-info">Ninfa • Hembra • 2 años</p>
+      <p class="modal-description">
+        Pepa es una ninfa muy sociable y divertida. Le encanta cantar, jugar con
+        adornos y recibir atención constante. Sana y desparasitada. Una compañera
+        alegre e interactiva que alegra cualquier hogar.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DANTE -->
+<div id="dante-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/dálmata.jpg" class="modal-img" alt="Dante">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Dante</h2></div>
+      <p class="pet-info">Dálmata • Macho • 1 año</p>
+      <p class="modal-description">
+        Dante es un perro lleno de energía, muy cariñoso y siempre dispuesto 
+        a jugar. Disfruta corriendo al aire libre y aprendiendo cosas nuevas. 
+        Está vacunado, desparasitado y con microchip. Perfecto para un hogar 
+        activo donde la diversión esté asegurada.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL HUGO -->
+<div id="hugo-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/estrelladelaindia.jpg" class="modal-img" alt="Hugo">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Hugo</h2></div>
+      <p class="pet-info">Estrella de la India • Macho • 4 años</p>
+      <p class="modal-description">
+        Hugo es curioso, observador y muy simpático. Le gusta explorar su
+        entorno y comunicarse con sonidos divertidos. Goza de excelente salud
+        y tiene energía media. Necesita interacción diaria y juguetes para
+        mantenerse estimulado y feliz.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SHYLA -->
+<div id="shyla-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/mestizo.jpg" class="modal-img" alt="Shyla">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Shyla</h2></div>
+      <p class="pet-info">Mestizo • Hembra • 6 años</p>
+      <p class="modal-description">
+        Shyla es una perrita noble, tranquila y muy cariñosa. Se adapta con
+        facilidad y disfruta de la compañía humana. Está vacunada,
+        desparasitada y tiene microchip. Un amor de perrita ideal para hogares
+        que busquen una amiga fiel y calmada.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL KIM -->
+<div id="kim-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/birmano.jpg" class="modal-img" alt="Kim">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Kim</h2></div>
+      <p class="pet-info">Birmano • Hembra • 1 año</p>
+      <p class="modal-description">
+        Kim es curiosa, activa y muy cariñosa cuando se siente en confianza. 
+        Le encanta jugar y descansar junto a quienes quiere. Vacunada, 
+        desparasitada y con microchip. Una compañera ideal para un hogar 
+        con juego y cariño.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CHESTER -->
+<div id="chester-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/chihuaha.jpg" class="modal-img" alt="Chester">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Chester</h2></div>
+      <p class="pet-info">Chihuaha • Macho • 6 años</p>
+      <p class="modal-description">
+        Chester es un perrito pequeño pero con un gran corazón. Protector,
+        atento y muy leal con las personas en las que confía. Está vacunado,
+        desparasitado y con microchip. Energía media, ideal para quien busque
+        un compañero fiel que siempre esté a su lado.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL GROK -->
+<div id="grok-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/canario.jpg" class="modal-img" alt="Grok">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Grok</h2></div>
+      <p class="pet-info">Canario • Macho • 1 año</p>
+      <p class="modal-description">
+        Grok es alegre y musical. Llena el hogar con canto suave y 
+        melodioso. Está sano y desparasitado. Perfecto para quienes 
+        disfrutan de la compañía tranquila y el sonido agradable de 
+        un pajarito feliz.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL PIPA -->
+<div id="pipa-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/americana1.jpg" class="modal-img" alt="Pipa">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Pipa</h2></div>
+      <p class="pet-info">Americana • Hembra • 2 años</p>
+      <p class="modal-description">
+        Pipa es muy sociable, dulce y agradecida. Se adapta bien a la compañía
+        humana y disfruta recibiendo cariño. Está sana y desparasitada. Energía
+        baja-media, perfecta para quienes quieran una amiga tierna y tranquila.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NENU -->
+<div id="nenu-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/angora.jpg" class="modal-img" alt="Nenu">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Nenu</h2></div>
+      <p class="pet-info">Angora • Macho • 2 meses</p>
+      <p class="modal-description">
+        Nenu es un conejito bebé, curioso y lleno de vida. Apenas comienza a
+        descubrir el mundo, por lo que necesita paciencia, cariño y seguridad.
+        Con vacunas al día y muy sano. Ideal para un hogar que desee
+        acompañarlo en su crecimiento y enseñarle todo con amor.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TRUC -->
+<div id="truc-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/Labrador.jpg" class="modal-img" alt="Truc">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Truc</h2></div>
+      <p class="pet-info">Labrador • Macho • 4 años</p>
+      <p class="modal-description">
+        Truc es un perro sociable, juguetón y muy cariñoso. Se lleva genial con
+        personas y otros perros. Vacunado, desparasitado y con microchip.
+        Energía media-alta, ideal para compartir paseos, juegos y mucho cariño
+        todos los días.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL FLOR -->
+<div id="flor-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/dutch.jpg" class="modal-img" alt="Flor">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Flor</h2></div>
+      <p class="pet-info">Dutch • Hembra • 5 meses</p>
+      <p class="modal-description">
+        Flor es una conejita dulce, curiosa y muy tranquila. Le encanta explorar 
+        nuevos espacios y disfrutar de caricias suaves cuando se siente en 
+        confianza. Se lleva bien con niños y otras mascotas de su tamaño. 
+        Está desparasitada y en perfecto estado de salud. Tiene energía media 
+        y es ideal para un hogar que busque una compañera tierna y calmada 
+        que llene la casa de paz y alegría.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL BYRON -->
+<div id="byron-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/pitbull.jpg" class="modal-img" alt="Byron">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Byron</h2></div>
+      <p class="pet-info">Pitbull • Macho • 1 año</p>
+      <p class="modal-description">
+        Byron es un perro fuerte, cariñoso y muy fiel. Disfruta mucho jugando, 
+        aprendiendo trucos y realizando ejercicio al aire libre. Está vacunado, 
+        desparasitado y con microchip. Ideal para familias activas que busquen 
+        un compañero con mucha energía y un corazón enorme.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+<!-- MODAL ODETTE -->
+<div id="odette-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/sinraza1.jpg" class="modal-img" alt="Odette">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Odette</h2></div>
+      <p class="pet-info">Mestizo • Hembra • 5 años</p>
+      <p class="modal-description">
+        Odette es una perrita muy noble, calmada y afectuosa. Le encanta estar 
+        tranquila en casa y recibir cariño. Es obediente y se adapta fácilmente 
+        a nuevas rutinas. Está vacunada y con microchip. Una compañera ideal 
+        para quien busque tranquilidad y amor sincero todos los días.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+<!-- MODAL DRACO -->
+<div id="draco-modal" class="modal">
+  <div class="modal-box">
+    <a href="#" class="close-btn">✕</a>
+    <img src="IMAGENES/sinraza3.jpg" class="modal-img" alt="Draco">
+    <div class="modal-content">
+      <div class="modal-header"><h2>Draco</h2></div>
+      <p class="pet-info">Mestizo • Macho • 1 año</p>
+      <p class="modal-description">
+        Draco es un perrito simpático, juguetón y siempre dispuesto a pasarlo 
+        bien. Le encantan los paseos, los juegos y descubrir nuevos lugares. 
+        Es muy cariñoso y le encanta recibir atenciones. Está vacunado y con 
+        microchip. Ideal para familias que busquen alegría y energía constante 
+        en casa.
+      </p>
+      <a href="#" class="adopt-btn">ADOPTAR</a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<footer>
+  <div class="footer-container">
+    <!-- IZQUIERDA -->
+    <div class="footer-left">
+      <a href="perfil.html">
+        <img src="IMAGENES/iconoSESIO╠üN.png" alt="Perfil" class="perfil-btn">
+      </a>
+    </div>
+
+    <!-- CENTRO -->
+    <div class="footer-center">
+      <img src="IMAGENES/logo happy paws.png" alt="Logo" class="logo-footer">
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="adopciones.html">Adopciones</a>
+        <a href="ayudanos.html">Ayúdanos</a>
+      </div>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="footer-right">
+      <img src="IMAGENES/instagram.png" alt="Instagram" class="social-icon">
+      <img src="IMAGENES/facebook.png" alt="Facebook" class="social-icon">
+      <img src="IMAGENES/tiktok.png" alt="TikTok" class="social-icon">
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script>
+  // Seleccionamos todos los checkboxes de los likes
+  const likes = document.querySelectorAll('.like-checkbox');
+
+  // Al cargar la página, recuperar los estados guardados
+  likes.forEach((like, index) => {
+    const saved = localStorage.getItem(`like${index + 1}`);
+    if (saved === 'true') {
+      like.checked = true;
+    }
+
+    // Guardar cada vez que se hace clic
+    like.addEventListener('change', () => {
+      localStorage.setItem(`like${index + 1}`, like.checked);
+    });
+  });
+</script>
+
+</body>
