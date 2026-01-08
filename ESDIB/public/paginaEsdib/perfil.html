@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>HappyPaws - Iniciar Sesión</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="IMAGENES/logo happy paws.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <img src="IMAGENES/logo happy paws.png" width="100px" height="100px" class="logo" alt="logo">
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="adopciones.html">Adopciones</a>
+      <a href="ayudanos.html">Ayúdanos</a>
+    </nav>
+
+    <a href="perfil.html" class="sesion">Mi Perfil</a>
+
+    <a href="perfil.html" class="icono-perfil" aria-label="Mi Perfil">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="profile-svg">
+        <path fill-rule="evenodd"
+          d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+          clip-rule="evenodd" />
+      </svg>
+    </a>
+  </header>
+
+  <div class="main-content">
+    <div class="login-container">
+      <div class="login-card" id="authContainer">
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+          <h1>¡Hola de nuevo!</h1>
+          <p class="subtitle">Inicia sesión para gestionar tus adopciones</p>
+
+          <div class="input-group">
+            <label for="loginUser">Usuario</label>
+            <input type="text" id="loginUser" name="username" placeholder="Tu nombre de usuario" required>
+          </div>
+
+          <div class="input-group">
+            <label for="loginPass">Contraseña</label>
+            <input type="password" id="loginPass" name="password" placeholder="••••••••" required>
+          </div>
+
+          <div class="actions">
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="login-btn">Iniciar Sesión</button>
+
+          <div class="register-link">
+            ¿No tienes cuenta? <a href="#" id="showRegister">Regístrate aquí</a>
+          </div>
+        </form>
+
+        <!-- REGISTER FORM (Hidden by default) -->
+        <form id="registerForm" style="display: none;">
+          <h1>Crear Cuenta</h1>
+          <p class="subtitle">Únete a nuestra comunidad</p>
+
+          <div class="input-group">
+            <label for="regUser">Usuario</label>
+            <input type="text" id="regUser" name="username" placeholder="Elige un nombre de usuario" required>
+          </div>
+
+          <div class="input-group">
+            <label for="regPass">Contraseña</label>
+            <input type="password" id="regPass" name="password" placeholder="Elige una contraseña segura" required>
+          </div>
+
+          <button type="submit" class="login-btn">Registrarse</button>
+
+          <div class="register-link">
+            ¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia sesión</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- USER PROFILE (Hidden by default) -->
+      <div class="login-card" id="userProfile" style="display: none;">
+        <h1>¡Bienvenido!</h1>
+        <p class="subtitle">Hola, <span id="usernameDisplay" style="font-weight: bold; color: #f57f17;">Usuario</span>
+        </p>
+
+        <div style="margin: 30px 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            style="width: 80px; height: 80px; color: #f57f17;">
+            <path fill-rule="evenodd"
+              d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+
+        <p>Desde aquí podrás gestionar tus solicitudes de adopción y favoritos.</p>
+
+        <div id="favoritesSection" style="margin-top: 30px; text-align: left;">
+          <h3
+            style="color: #333; font-size: 18px; margin-bottom: 15px; border-bottom: 2px solid #f57f17; padding-bottom: 5px; display: inline-block;">
+            Mis Favoritos ❤️</h3>
+          <div id="favoritesContainer" class="favorites-grid">
+            <!-- Aquí se cargarán las mascotas -->
+            <p style="color: #777; font-size: 14px;">Aún no tienes favoritos.</p>
+          </div>
+        </div>
+
+        <button id="logoutBtn" class="login-btn" style="background-color: #d32f2f; margin-top: 30px;">Cerrar
+          Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="perfil.html">
+          <img src="IMAGENES/iconoSESIO╠üN.png" alt="Perfil" class="perfil-btn">
+        </a>
+      </div>
+
+      <div class="footer-center">
+        <img src="IMAGENES/logo happy paws.png" alt="Logo" class="logo-footer">
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="adopciones.html">Adopciones</a>
+          <a href="ayudanos.html">Ayúdanos</a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <img src="IMAGENES/instagram.png" alt="Instagram" class="social-icon">
+        <img src="IMAGENES/facebook.png" alt="Facebook" class="social-icon">
+        <img src="IMAGENES/tiktok.png" alt="TikTok" class="social-icon">
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

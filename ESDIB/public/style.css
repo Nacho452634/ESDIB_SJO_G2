@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #ffbf69;
+    --primary-hover: #ff9f1c;
+    --secondary: #2ec4b6;
+    --bg-color: #fcf5eb;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    padding-bottom: 80px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 600;
+    color: #2d3436;
+    font-size: 2.5rem;
+}
+
+/* FORMULARIO */
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 50px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+form h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #eee;
+    font-family: inherit;
+    font-size: 14px;
+    transition: var(--transition);
+    background: #fafafa;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary);
+    background: #fff;
+    outline: none;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: var(--primary);
+    color: #fff;
+    font-size: 16px;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: var(--primary-hover);
+    transform: scale(1.02);
+}
+
+/* TARJETAS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #2d3436;
+}
+
+.card-info p {
+    color: #636e72;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.card button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    color: white;
+}
+
+.card button:nth-child(1) {
+    background: #74b9ff;
+}
+
+.card button:nth-child(1):hover {
+    background: #0984e3;
+}
+
+.card button:nth-child(2) {
+    background: #ffeaa7;
+    color: #d35400;
+}
+
+.card button:nth-child(2):hover {
+    background: #fdcb6e;
+}
+
+.card button:nth-child(3) {
+    background: #ff7675;
+}
+
+.card button:nth-child(3):hover {
+    background: #d63031;
+}
+
+/* MODAL */
+.modal-bg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transform: scale(0.9);
+    animation: popIn 0.3s forwards;
+}
+
+@keyframes popIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+.modal img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #2d3436;
+}
+
+.modal p {
+    color: #636e72;
+    line-height: 1.6;
+}
+
+#closeModal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+#closeModal:hover {
+    color: #333;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
